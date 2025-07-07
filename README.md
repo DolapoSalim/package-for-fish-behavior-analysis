@@ -123,7 +123,7 @@ config = Config(
 ## Output Files
 
 The analysis generates several output files:
-
+  
 - `average_speeds.csv`: Time series of average swimming speeds
 - `direction_histogram.json`: Histogram of swimming directions
 - `sudden_changes.json`: Detected sudden behavior changes
@@ -183,12 +183,12 @@ If you use this software in your research, please cite:
 ```bibtex
 @software{fish_behavior_analysis,
   title={Fish Behavior Analysis: A Python Toolkit for Video-based Behavioral Analysis},
-  author={Your Name},
-  year={2024},
-  url={https://github.com/yourusername/fish-behavior-analysis}
+  author={Olatoye Dolapo Salim},
+  year={2025},
+  url={https://github.com/DolapoSalim/package-for-fish-behavior-analysis}
 }
 ```
 
 ## Support
 
-For questions and support, please open an issue on GitHub or contact [your.email@example.com].
+For questions and support, please open an issue on GitHub or contact [dolaposalim@gmail.com].

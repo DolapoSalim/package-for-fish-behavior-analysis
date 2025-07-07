@@ -123,7 +123,7 @@ config = Config(
 ## Output Files
 
 The analysis generates several output files:
-
+  
 - `average_speeds.csv`: Time series of average swimming speeds
 - `direction_histogram.json`: Histogram of swimming directions
 - `sudden_changes.json`: Detected sudden behavior changes

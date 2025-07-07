@@ -1,0 +1,88 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fish-behavior-analysis"
+dynamic = ["version"]
+description = "A comprehensive toolkit for analyzing fish behavior in video recordings"
+readme = "README.md"
+license = {text = "Apache"}
+authors = [
+    {name = "DolapoSalim", email = "dolaposalim@gmail.com"},
+]
+maintainers = [
+    {name = "DolapoSalim", email = "dolaposalim@gmail.com"},
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: Apache :: Apache License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.21.0",
+    "opencv-python>=4.5.0",
+    "matplotlib>=3.5.0",
+    "pandas>=1.3.0",
+    "scipy>=1.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=2.0",
+    "black>=21.0",
+    "flake8>=3.8",
+    "mypy>=0.812",
+    "pre-commit>=2.15.0",
+]
+docs = [
+    "sphinx>=3.0",
+    "sphinx-rtd-theme>=0.5",
+    "myst-parser>=0.15.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/DolapoSalim/package-for-fish-behavior-analysis"
+Repository = "https://github.com/DolapoSalim/package-for-fish-behavior-analysis"
+Documentation = "https://github.com/DolapoSalim/package-for-fish-behavior-analysis"
+"Bug Tracker" = "https://github.com/DolapoSalim/package-for-fish-behavior-analysis/issues"
+
+[project.scripts]
+fish-behavior-analysis = "fish_behavior_analysis.cli.main:main"
+
+[tool.setuptools_scm]
+write_to = "fish_behavior_analysis/_version.py"
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
